@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="templates/registration/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hai alll</h1>
+
+    <div class="container">
+        <div class="col-md-6">
+            <div class="card" id="reg_form">
+                <h1>Register Here....</h1>
+            </div>
+            <div>
+                <form method="POST">
+                {% for f in form %}
+                    {% csrf_token %}
+                    {{f.html_name}}
+                    <input type="text" name="" id="">
+                    {{f.help_text}}
+                    {{f.error}}
+                {% endfor %}
+                <input type="submit" value="Register">
+            </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
